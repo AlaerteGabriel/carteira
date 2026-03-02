@@ -1,4 +1,4 @@
-# 💰 Wallet System - Laravel 12
+# 💰 Carteira Financeira - Laravel 12
 
 Sistema de Carteira Digital com arquitetura baseada em **Ledger** (Livro-razão), focado em integridade financeira, segurança de transações e padrões de projeto sólidos.
 
@@ -51,7 +51,7 @@ Performance: O usuário não aguarda o envio do e-mail para receber a confirmaç
 
 Segurança de Transação: O Job utiliza o método afterCommit() para garantir que o e-mail só seja enfileirado se o registro no banco de dados for de fato confirmado.
 
-🛠️ Regras de Negócio Implementadas
+# Regras de Negócio Implementadas
 Validação de Saldo: Bloqueio em tempo real de transferências que excedam o saldo disponível.
 
 Imutabilidade Financeira: Registros de transações nunca são deletados ou alterados diretamente.
