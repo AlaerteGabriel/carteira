@@ -50,20 +50,34 @@ Auditoria: Cada transação armazena quem a operou, quem pagou e quem recebeu.
 
 # Instalação e Configuração
 
-# 1. Clonar e instalar dependências
+1. Clonar e instalar dependências
 
 git clone https://github.com/AlaerteGabriel/carteira.git
 composer install
 
-# 2. Configurar ambiente
+2. Configurar ambiente
 cp .env.example .env
 php artisan key:generate
-# (Configure seu banco de dados no .env)
+(Configure seu banco de dados no .env)
 
-# 3. Migrações e Dados Iniciais (Seed)
-# O Seeder utiliza o Service para garantir que os saldos iniciais gerem extratos reais
+3. Migrações e Dados Iniciais (Seed)
+O Seeder utiliza o Service para garantir que os saldos iniciais gerem extratos reais
 php artisan migrate:fresh --seed
 
-# 4. Executar Testes Automatizados
+4. Executar Testes Automatizados
 # Testes de Feature cobrindo fluxos felizes e exceções (Segurança/Saldo/Estorno)
 php artisan test
+
+# Estratégia de Testes
+O projeto conta com uma suíte de Feature Tests que validam:
+
+Cadastro de usuários via Repository.
+
+Depósitos e transferências com validação de saldo.
+
+Estorno de transações com recálculo automático de saldo via Observer.
+
+Bloqueio de acesso indevido via Policies.
+
+# Próximo passo para o avaliador:
+Se você precisar de mais detalhes sobre a implementação das Interfaces ou da lógica do Observer, os arquivos principais estão em app/Repositories, app/Services e app/Observers.
