@@ -50,7 +50,7 @@ O projeto conta com uma suíte de **Feature Tests** que validam:
 ## 🚀 Guia de Instalação e Execução
 
 ### Pré-requisitos:
-* **PHP 8.2 ou 8.3**
+* **PHP 8.3+**
 * **Composer**
 * **MySQL / MariaDB**
 
