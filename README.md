@@ -66,6 +66,7 @@ php artisan key:generate
 
 # 3. Preparar Banco de Dados e Seed
 # O Seeder utiliza os Services e Repositories para gerar dados íntegros
+# É necessário criar o banco de dados de com o nome "carteira" (que está previamente configurado no .env de exemplo)
 php artisan migrate:fresh --seed
 
 # 4. Executar Testes Automatizados (Feature Tests)
