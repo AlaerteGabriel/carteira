@@ -1,4 +1,4 @@
-# 💰 Carteira Financeira - Laravel 12
+# Carteira Financeira - Laravel 12
 
 Sistema de Carteira Digital com arquitetura baseada em **Ledger** (Livro-razão), focado em integridade financeira, segurança de transações e padrões de projeto sólidos.
 
@@ -73,7 +73,7 @@ Bloqueio de acesso indevido via Policies.
 
 ---
 
-## 🏗️ Arquitetura e Padrões de Projeto
+## Arquitetura e Padrões de Projeto
 
 O projeto foi construído utilizando padrões que garantem a escalabilidade e a testabilidade do código:
 
@@ -100,7 +100,7 @@ Camada de autorização para proteção contra ataques IDOR.
 
 ---
 
-## 🛠️ Regras de Negócio Implementadas
+## Regras de Negócio Implementadas
 
 - **Estornabilidade Reversa:** Transações não são deletadas. O estorno gera uma nova transação de anulação (débito/crédito reverso) para manter a trilha de auditoria.
 - **Processamento Assíncrono:** Envio de e-mails de boas-vindas via `SendCadastroUserJob` com o método `afterCommit()`, garantindo o disparo apenas após o sucesso da transação no banco.
@@ -108,7 +108,7 @@ Camada de autorização para proteção contra ataques IDOR.
 
 ---
 
-## 🚀 Guia de Instalação e Execução
+## Guia de Instalação e Execução
 
 Siga os comandos abaixo para configurar o ambiente:
 
